@@ -1,0 +1,48 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 45px;
+    margin-top: 50px;
+    width: 197px;
+    height: 56px;
+}
+
+.nav-links{
+    margin-top: 50px;
+    margin-right: 99px;
+    padding-top: 16px;
+    width: 201px;
+    display: flex;
+    justify-content: flex-end;
+}
+.signin{
+    margin-right: 21px;
+}
+
+.navigation{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #06114F;
+}
+
+a{
+    cursor: pointer;
+}
+
+/* @media (max-width: 500px) {
+    .logo{
+        width: 123.125px;
+        height: 35px;
+    }
+    
+    .navigation{
+        font-size: 12.5px;
+         line-height: 15.625px; 
+    }
+} 
+*/
