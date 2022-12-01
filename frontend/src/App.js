@@ -27,7 +27,10 @@ const App = () => {
               }
             </div>
           </div> :
-          <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
+          <div>
+            <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
+            <FrontPage />
+          </div>
       }
     </div> 
   )

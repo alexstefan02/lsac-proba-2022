@@ -33,16 +33,25 @@
 a{
     cursor: pointer;
 }
+.vector{
+    display: none;
+    height: 26.66666603088379px;
+    width: 26.666664123535156px;
+}
 
-/* @media (max-width: 500px) {
+@media (max-width: 700px) {
     .logo{
-        width: 123.125px;
-        height: 35px;
+        margin-left: 10px;
     }
-    
-    .navigation{
-        font-size: 12.5px;
-         line-height: 15.625px; 
+    .nav-links{
+        margin-right: 10px;
     }
-} 
-*/
+    @media(max-width: 450px){
+        .navigation{
+            display: none;
+        }
+        .vector{
+            display: block;
+        }
+    }
+}

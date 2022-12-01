@@ -1,0 +1,88 @@
+.front-page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-text{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 300%;
+    text-align: center;
+    color: #252F65;
+}
+.one{
+    margin-bottom: 0;
+}
+.two{
+    margin-top: 0;
+}
+
+.paragraph-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 145%;
+    line-height: 23px;
+    text-align: center;
+    color: #252F65;
+}
+
+.uploadMemeBtn{
+    background: #6F3096;
+    height: 65px;
+    width: 286px;
+    border-radius: 5px;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.salty-photo{
+    right: 7%;
+    height: 73.85%;
+    width: 40%;
+    border-radius: 0px;
+}
+
+@media (max-width: 800px) {
+    .front-page{
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    .salty-photo{
+        width: 85%;
+    }
+    .paragraph-text{
+        font-size: 120%;
+    }
+    .head-text{
+        font-size: 200%;
+    }
+    @media (max-width: 500px) {
+        .uploadMemeBtn{
+            width: 80%;
+        }
+        .head-text{
+            font-size: 28px;
+        }
+        @media (max-width: 430px) {
+            .paragraph-text{
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+    }
+  }
