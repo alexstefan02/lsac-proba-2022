@@ -1,8 +1,11 @@
 import React from 'react'
+import './ImageUploadForm.css'
 
 const ImageUploadForm = () => {
   return (
-    <div>ImageUploadForm</div>
+    <div className='image-upload-form'>
+      
+    </div>
   )
 }
 

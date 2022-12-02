@@ -28,8 +28,11 @@ const App = () => {
             </div>
           </div> :
           <div>
-            <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
-            <FrontPage />
+            <div className='first-page'>
+              <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
+              <FrontPage />
+            </div>
+            <ImageUploadForm />
           </div>
       }
     </div> 

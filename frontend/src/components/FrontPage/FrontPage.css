@@ -1,8 +1,10 @@
 .front-page{
+    margin-top: 115px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 27px;
 }
 
 .content-section{
@@ -59,7 +61,7 @@
 
 @media (max-width: 800px) {
     .front-page{
-        margin-top: 50px;
+        margin-top: 115px;
         flex-direction: column;
     }
     .salty-photo{
