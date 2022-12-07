@@ -1,19 +1,17 @@
 .active{
-    filter: blur(20px);
+    filter: blur(11.25px);
 }
 
 .popup{
     position: fixed;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.popup{
-    transition: 0.5s;
+    border-radius: 5px;
 }
 
 .first-page{
     min-height: 100vh;
-    background: #F5F5F5;
+    background:  #FFFFFF
+;
 }

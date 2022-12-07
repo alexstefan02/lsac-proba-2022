@@ -17,7 +17,10 @@ const App = () => {
         route !== 'home' ?
           <div>
             <div className='content active'>
-              <Navbar />
+              <FrontPage />
+              <ImageUploadForm />
+              <MostViewedSection />
+              <Footer />
             </div>
             <div className='popup'>
               {
@@ -28,11 +31,11 @@ const App = () => {
             </div>
           </div> :
           <div>
-            <div className='first-page'>
-              <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
-              <FrontPage />
-            </div>
+            <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
+            <FrontPage />
             <ImageUploadForm />
+            <MostViewedSection />
+            <Footer />
           </div>
       }
     </div> 

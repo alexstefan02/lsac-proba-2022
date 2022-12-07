@@ -1,0 +1,56 @@
+.most-viewed-section{
+    margin-bottom: 53px;
+}
+
+.memes-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 37px; 
+    place-items: center;
+    justify-content: space-around;
+}
+
+.meme1{
+    width: 418px;
+    height: 369px;
+    border-radius: 55px;
+}
+
+.meme2{
+    width: 412px;
+    height: 364px;
+    border-radius: 53px;
+}
+
+.meme3{
+    width: 418px;
+    height: 363px;
+    border-radius: 46px;
+}
+
+.header-most-viewed{
+    margin-left: 69px;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #252F65;
+}
+
+@media (max-width: 1280px) {
+    .memes-list { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    @media (max-width: 850px) {
+        .memes-list { 
+            grid-template-columns: 1fr; 
+        }
+        @media (max-width: 400px) {
+            .meme1, .meme2, .meme3{
+                width: 90%;
+                height: 105%;
+            }
+        }
+    }
+}

@@ -1,5 +1,258 @@
 .image-upload-form{
     width: 100%;
-    height: 673px;
+    min-height: 100vh;
     background: #6F3096;
+    display: grid;
+    place-items: center;
 }
+
+.card{
+    width: 65.57%;
+    min-height: 68%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(38, 50, 56, 0.5);
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.headerD{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    /* line-height: 121.1%; */
+    color: #252F65;
+}
+
+.no-margin{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.last{
+    margin-bottom: 20px;
+}
+
+.paragraphD{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    /* line-height: 121.1%; */
+    color: #252F65;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-description{
+    width: 353.68px;
+    height: 40.42px;
+    border: 1px solid #06114F;
+    border-radius: 5px;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(6, 17, 79, 0.3);
+}
+
+.input-meme{
+    width: 354.22px;
+    height: 150.84px;
+    border: 1px solid #252F65;
+    border-radius: 5px;
+}
+
+.input-meme-text{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(6, 17, 79, 0.3);
+}
+
+.input-meme--over{
+    border: 4px solid #252F65;
+}
+
+.memeFile{
+    display: none;
+}
+
+.meme__thumb{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* background-color: #06114F; */
+    background-size: cover;
+    position: relative;
+}
+
+.meme__thumb::after{
+    content: attr(data-label);
+    background-image: attr(image) !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:  5px 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+}
+
+.label-description{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #06114F;
+    margin-bottom: 2px;
+}
+
+.remove-border{
+    border: none
+}
+
+.label-meme{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #06114F;
+    margin-bottom: 2px;
+}
+
+.send-meme{
+    background: #6F3096;
+    border-radius: 5px;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 30px;
+    height: 40.42113494873047px;
+    width: 161.46482849121094px;
+    border: none;
+}
+
+.remove{
+    display: none;
+}
+
+.send-meme:hover{
+    transform: scale(1.03125);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-paragraph{
+    margin-bottom: 60px;
+}
+
+/* .input-meme{
+    background-color: black;
+} */
+
+.input-meme-text{
+    margin-left: 40px;
+    /* background-color: aqua; */
+}
+
+@media (max-width:1200px) {
+    .input-description, .input-meme{
+        width: 115%;
+    }
+    .paragraphD, .headerD{
+        text-align: center;
+    }
+    .description-element, .meme-element{
+        width: 95%;
+    }
+    @media (max-width:1150px) {
+        .input-description, .input-meme{
+            width: 108%;
+        }
+        @media (max-width:1000px) {
+            .description-element, .meme-element{
+                width: 97.5%;
+            }
+            .input-description, .input-meme{
+                width: 95%;
+            }
+            @media (max-width:900px) {
+                .card{
+                    width: 70.57%;
+                    min-height: 68%;
+                }
+                @media (max-width:850px) {
+                    .card{
+                        width: 65.57%;
+                        min-height: 68%;
+                    }
+                    .bottom-paragraph{
+                        margin-bottom: 30px;
+                    }
+                    .send-meme{
+                        margin-bottom: 48px; 
+                    }
+                    .top-header{
+                        margin-top: 50px;
+                    }
+                    .card{
+                        margin-top: 75px;
+                        margin-bottom: 75px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .description-element, .meme-element{
+                        width: 354.22px;
+                    }
+                    @media (max-width:700px) {
+                        .card{
+                            width: 85.57%;
+                            height: 90%;
+                        }
+                        @media (max-width:475px) {
+                            .description-element, .meme-element{
+                                width: 113.5%;
+                            }
+                            @media (max-width: 400px) {
+                                .headerD{
+                                    font-weight: 700;
+                                    font-size: 28px;
+                                }
+                                .paragraphD{
+                                    font-size: 18px;
+                                }
+                                .input-meme, .input-description{
+                                    width: 250px;
+                                }
+                                .meme-element, .description-element{
+                                    margin-left: 14%;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

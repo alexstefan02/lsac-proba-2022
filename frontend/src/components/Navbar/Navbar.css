@@ -1,24 +1,24 @@
 .navbar{
-    background-color: #F5F5F5;
+    background-color:  #FFFFFF;
+    height: 100px;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
     margin-left: 45px;
-    margin-top: 50px;
     width: 197px;
     height: 56px;
 }
 
 .nav-links{
-    margin-top: 50px;
     margin-right: 99px;
     padding-top: 16px;
-    width: 201px;
+    min-width: 201px;
     display: flex;
     justify-content: flex-end;
 }
@@ -34,6 +34,10 @@
     color: #06114F;
 }
 
+.navigation:hover{
+    transform: scale(1.03125);
+}
+
 a{
     cursor: pointer;
 }
@@ -41,6 +45,25 @@ a{
     display: none;
     height: 26.66666603088379px;
     width: 26.666664123535156px;
+}
+
+
+@media (min-width: 1600px){
+    .navigation{
+        font-size: 170%;
+    }
+    .navbar{
+        height: 12.75%
+    }
+    .logo{
+        width: 13.66%;
+        height: 55%;
+    }
+    @media (min-width: 2000px){
+        .logo{
+            height: 63%;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -51,11 +74,25 @@ a{
         margin-right: 10px;
     }
     @media(max-width: 450px){
+        body{
+            padding: 0;
+        }
+        .logo{
+            height: 31px;
+            width: 108px;
+            left: 33px;
+        }
         .navigation{
             display: none;
         }
         .vector{
+            margin-right: 30px;
+            margin-bottom: 12.5px;
             display: block;
+        }
+        .navbar{
+            padding-top: 15px; 
+            height: 80px;
         }
     }
 }

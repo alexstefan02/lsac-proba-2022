@@ -16,14 +16,18 @@ const Login = ({setRoute, setIsSignedIn}) => {
           <h3 className='header'>
             Welcome back
           </h3>
-          <p className='label username'>
-            Username
-          </p>
-          <input className='input' type='text' placeholder='username' />
-          <p className='label password'>
-            Parolă
-          </p>
-          <input className='input' type='text' placeholder='parolă' />
+          <div className='username-section'>
+            <p className='label username'>
+              Username
+            </p>
+            <input className='input' type='text' placeholder='username' />
+          </div>
+          <div className='password-section'>
+            <p className='label password'>
+              Parolă
+            </p>
+            <input className='input' type='text' placeholder='parolă' />
+          </div>
           <button className='loginBtn' 
                   onClick={() => 
                   {
