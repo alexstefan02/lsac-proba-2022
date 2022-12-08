@@ -35,14 +35,14 @@
     transform: scale(1.25);
 }
 
-.discord{
+.twitch{
     cursor: pointer;
     height: 24px;
     width: 21px;
     border-radius: 0px;
 }
 
-.discord:hover{
+.twitch:hover{
     transform: scale(1.25);
 }
 

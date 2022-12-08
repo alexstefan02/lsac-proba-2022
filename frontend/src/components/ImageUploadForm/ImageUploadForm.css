@@ -99,7 +99,6 @@
 
 .meme__thumb::after{
     content: attr(data-label);
-    background-image: attr(image) !important;
     position: absolute;
     bottom: 0;
     left: 0;

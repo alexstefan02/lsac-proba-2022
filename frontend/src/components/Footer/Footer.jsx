@@ -1,16 +1,22 @@
 import React from 'react'
 import './Footer.css'
 import Insta from './Insta.png'
-import Discord from './Discord.png'
+import Twitch from './Twitch.png'
 import Facebook from './Facebook.png'
 
 const Footer = () => {
   return (
     <div className='footer'>
       <div className='social-links'>
-        <img className='insta' src={Insta} alt='insta' />
-        <img className='discord' src={Discord} alt='discord' />
-        <img className='facebook' src={Facebook} alt='fb' />
+        <a href='https://www.instagram.com/lsacbucuresti/'>
+          <img className='insta' src={Insta} alt='insta' />
+        </a>
+        <a href='https://www.twitch.tv/lsac_bucuresti'>
+          <img className='twitch' src={Twitch} alt='twitch' />
+        </a>
+        <a href='https://www.facebook.com/LsacBucuresti/'>
+          <img className='facebook' src={Facebook} alt='fb' />
+        </a>
       </div>
       <p className='copyright'>
         Copyright 2022 | La muncă, nu la întins mâna.
