@@ -22,7 +22,6 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    /* line-height: 121.1%; */
     color: #252F65;
 }
 
@@ -40,7 +39,6 @@
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
-    /* line-height: 121.1%; */
     color: #252F65;
 }
 
@@ -55,19 +53,24 @@
     height: 40.42px;
     border: 1px solid #06114F;
     border-radius: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     color: rgba(6, 17, 79, 0.3);
-}
+  }
 
 .input-meme{
     width: 354.22px;
     height: 150.84px;
     border: 1px solid #252F65;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .input-meme-text{
@@ -92,9 +95,9 @@
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
-    /* background-color: #06114F; */
     background-size: cover;
     position: relative;
+    background-color: white;
 }
 
 .meme__thumb::after{
@@ -118,6 +121,7 @@
     line-height: 20px;
     color: #06114F;
     margin-bottom: 2px;
+    margin-top: 75px;
 }
 
 .remove-border{
@@ -148,6 +152,7 @@
     height: 40.42113494873047px;
     width: 161.46482849121094px;
     border: none;
+    margin-bottom: 46.58px;
 }
 
 .remove{
@@ -163,42 +168,41 @@
     margin-bottom: 60px;
 }
 
-/* .input-meme{
-    background-color: black;
-} */
-
 .input-meme-text{
     margin-left: 40px;
-    /* background-color: aqua; */
 }
+
 
 @media (max-width:1200px) {
     .input-description, .input-meme{
-        width: 115%;
+        width: 350px;
     }
     .paragraphD, .headerD{
         text-align: center;
     }
-    .description-element, .meme-element{
-        width: 95%;
-    }
     @media (max-width:1150px) {
         .input-description, .input-meme{
-            width: 108%;
+            width: 311.81px;
         }
         @media (max-width:1000px) {
             .description-element, .meme-element{
                 width: 97.5%;
             }
             .input-description, .input-meme{
-                width: 95%;
+                width: 260.27px;
             }
             @media (max-width:900px) {
+                .input-description, .input-meme{
+                    width: 250.27px;
+                }
                 .card{
                     width: 70.57%;
                     min-height: 68%;
                 }
                 @media (max-width:850px) {
+                    .input-description, .input-meme{
+                        width: 353.68px;
+                    }
                     .card{
                         width: 65.57%;
                         min-height: 68%;
@@ -227,26 +231,24 @@
                             width: 85.57%;
                             height: 90%;
                         }
-                        @media (max-width:475px) {
-                            .description-element, .meme-element{
-                                width: 113.5%;
+                        @media (max-width: 450px) {
+                            .form{
+                                width: 297px;
                             }
-                            @media (max-width: 400px) {
-                                .headerD{
-                                    font-weight: 700;
-                                    font-size: 28px;
-                                }
-                                .paragraphD{
-                                    font-size: 18px;
-                                }
-                                .input-meme, .input-description{
-                                    width: 250px;
-                                }
-                                .meme-element, .description-element{
-                                    margin-left: 14%;
-                                }
+                            .headerD{
+                                font-weight: 700;
+                                font-size: 28px;
+                            }
+                            .paragraphD{
+                                font-size: 18px;
+                            }
+                            .input-meme, .input-description, .description-element, .meme-element{
+                               width: 250px;
+                            }
+                            /* .meme-element, .description-element{
+                                margin-left: 14%;
+                            } */
 
-                            }
                         }
                     }
                 }

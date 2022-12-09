@@ -46,7 +46,8 @@ const ImageUploadForm = () => {
           </div>
           <div className='meme-element' >
             <p className='label-meme'>Meme (jpg, jpeg, png, gif)</p>
-            <div style={{position: 'relative'}}
+            <div 
+              style={{position: 'relative'}}
               onDragOver={e => {
                 handleDefaultPropagation(e);
                 setIsDraggedOver(true);
@@ -83,10 +84,11 @@ const ImageUploadForm = () => {
                       bottom: '0px', 
                       right: '0px', 
                       width: '100%', 
-                      height:'100%'
+                      height:'100%',
+                      border: 'none'
                       }} 
                 accept=".jpg, .jpeg, .png, .gif"
-                onChange={(e) => dropEvent(e.target)}
+                onChange={e => dropEvent(e.target)}
               />
             </div>
           </div>
