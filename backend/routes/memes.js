@@ -5,8 +5,8 @@ router.use(express.json())
 //getting all
 router.get('/', async (req, res) => {
     try{
-        const subscribers = await Meme.find()
-        res.json(subscribers)
+        const memes = await Meme.find()
+        res.json(memes)
     }catch(err){
         res.status(500).json(err.message)
     }
