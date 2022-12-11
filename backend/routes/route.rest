@@ -1,0 +1,24 @@
+GET http://localhost:3000/memes
+
+
+###
+GET http://localhost:3000/memes/6A395c951112282a3e2a02dc8
+
+###
+POST http://localhost:3000/memes/
+Content-Type: application/json
+
+{
+    "description": "This is a meme description"
+}
+
+###
+DELETE http://localhost:3000/memes/6395c951112282a3e2a02dc8
+
+###
+PATCH http://localhost:3000/memes/6395c9724a1b6d52fc8ebb3b
+Content-Type: application/json
+
+{
+    "description": "EDITED This is a meme description"
+}

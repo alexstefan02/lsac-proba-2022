@@ -3,7 +3,7 @@ import './Navbar.css'
 import Logo from './Logo.png'
 import Vector from './Vector.png'
 
-const Navbar = ({setRoute, isSignedIn, setIsSignedIn}) => {
+const Navbar = ({setRoute, isSignedIn, setIsSignedIn, setIsPhoneWidth}) => {
   return (
       !isSignedIn ? 
       <div className='navbar'>
@@ -24,7 +24,7 @@ const Navbar = ({setRoute, isSignedIn, setIsSignedIn}) => {
         <a className='navigation signin' onClick={() => setIsSignedIn(false)}>
           Delogare
         </a>
-        <img className='vector' src={Vector} alt='vector' />
+        <img className='vector' src={Vector} alt='vector' onClick={setIsPhoneWidth(true)}/>
       </div>
     </div>
   )

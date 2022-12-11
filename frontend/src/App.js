@@ -11,6 +11,8 @@ import './App.css'
 const App = () => {
   const [route, setRoute] = useState('home');
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isPhoneWidth, setIsPhoneWidth] = useState(false);
+
   return (
     <div>
       {
@@ -31,7 +33,7 @@ const App = () => {
             </div>
           </div> :
           <div>
-            <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>
+            <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} setIsPhoneWidth={setIsPhoneWidth}/>
             <FrontPage />
             <ImageUploadForm />
             <MostViewedSection />
