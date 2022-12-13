@@ -32,13 +32,13 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/register', async (req,res) => {
-    let badRegistrationError = {}, isError = false
+    let badRegistrationError = {}, isError = false, email = req.body.email
     try{
         if(req.body.password === undefined){
             badRegistrationError.password = "is missing"
             isError = true
         }
-        if(req.body.email === undefined){
+        if(email === undefined){
             badRegistrationError.email = "is missing"
             isError = true
         }
@@ -47,54 +47,38 @@ app.post('/register', async (req,res) => {
             isError = true
         }
         if(isError)
-            res.status(400).json(badRegistrationError)
-        else{
-            const hashedPassword = await bcrypt.hash(req.body.password, 10)
-            const user = new User({
-                email: req.body.email,
-                username: req.body.username,
-                password: hashedPassword
-            })
-            const newUser = await user.save()
-            res.status(201).json(newUser)
-            allAccounts.push(newUser)
+            return res.status(400).json(badRegistrationError)
+        let badSyntaxError = {}, isSyntaxError = false
+        const passwordLen = req.body.password.length
+        const usernameLen = req.body.username.length
+        if(passwordLen < 8 || passwordLen > 32){
+            badSyntaxError.password = ["the field is not between 8 and 32 characters"]
+            isSyntaxError = true
         }
+        if(usernameLen < 8 || usernameLen > 32){
+            badSyntaxError.username = ["the field is not between 8 and 32 characters"]
+            isSyntaxError = true
+        }
+        if(!email.endsWith('@stud.acs.upb.ro')){
+            badSyntaxError.email = ["the field must be a valid email ", "the field must end in @stud.acs.upb.ro"]
+            isSyntaxError = true            
+        }
+        if(isSyntaxError)
+            return res.status(401).json(badSyntaxError)
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        const user = new User({
+            email: req.body.email,
+            username: req.body.username,
+            password: hashedPassword
+        })
+        const newUser = await user.save()
+        res.status(201).json(newUser)
+        allAccounts.push(newUser)
+        
     }catch(err){
         res.status(400).json(err.message)
     }
 })
-
-// app.post('/login', async (req,res) => {
-//     let badAuthentificationError = {}, isError = false
-//     if(req.body.email === undefined){
-//         badAuthentificationError.email = "is required"
-//         isError = true
-//     }
-//     if(req.body.password === undefined){
-//         badAuthentificationError.password = "is required"
-//         isError = true
-//     }
-//     if(isError)
-//         return res.status(400).json(badAuthentificationError)
-//     const user = allAccounts.find(user => user.email === req.body.email)
-//     if(user == null){
-//         return res.status(400).json({
-//             message: "Wrong email or password"
-//         })
-//     }
-//     try{
-//         const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
-//         if(await bcrypt.compare(req.body.password, user.password)) {
-//             res.send('Success')
-//         }else{
-//             return res.status(400).json({
-//                 message: "Wrong email or password"
-//             })
-//         }
-//     }catch{
-//         res.status(500).send()
-//     }
-// })
 
 app.post('/login', async (req, res) => {
     const user = allAccounts.find(user => user.email === req.body.email)
@@ -110,7 +94,9 @@ app.post('/login', async (req, res) => {
     if(isError)
         return res.status(400).json(badAuthentificationError)
     if (user == null) {
-      return res.status(400).send('Cannot find user')
+      return res.status(400).json({
+        message: "Wrong email or password"
+    })
     }
     try {
         if(await bcrypt.compare(req.body.password, user.password)) {

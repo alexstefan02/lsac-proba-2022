@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router()
 const Meme  = require('../models/meme')
 router.use(express.json())
+
+const errorLongDescription = {description: ["the field has over 2500 characters"]}
+
 //getting all
 router.get('/', async (req, res) => {
     try{
@@ -20,6 +23,8 @@ router.post('/', async (req,res) => {
     const meme = new Meme({
         description: req.body.description
     })
+    if(meme.description.length > 2500)
+        return res.status(401).json(errorLongDescription)
     try{
         const newMeme = await meme.save()
         res.status(201).json(newMeme)
@@ -30,6 +35,8 @@ router.post('/', async (req,res) => {
 //updating one
 router.patch('/:id', getMeme, async (req,res) => {
     if(req.body.description != null){
+        if(req.body.description.length > 2500)
+            return res.status(401).json(errorLongDescription)
         res.meme.description = req.body.description
     }
     try{

@@ -2,7 +2,7 @@ GET http://localhost:3000/memes
 
 
 ###
-GET http://localhost:3000/memes/6A395c951112282a3e2a02dc8
+GET http://localhost:3000/memes/6A395c951112282a3e2a02dc
 
 ###
 POST http://localhost:3000/memes/
@@ -20,5 +20,5 @@ PATCH http://localhost:3000/memes/6395c9724a1b6d52fc8ebb3b
 Content-Type: application/json
 
 {
-    "description": "EDITED This is a meme description"
+    "description": "12"
 }
