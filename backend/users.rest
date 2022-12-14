@@ -1,0 +1,21 @@
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "password": "Alex1234",
+    "email": "Alex@stud.acs.upb.ro",
+    "username": "Alex1234"
+}
+
+###
+GET http://localhost:3000/
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "Alex@stud.acs.upb.ro",
+    "password": "Alex1234"
+}

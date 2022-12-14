@@ -1,0 +1,58 @@
+.footer{
+    width: 100%;
+    height: 174px;
+    background: #06114F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 121.1%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.social-links{
+    width: 91.97px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.insta{
+    cursor: pointer;
+    height: 25.159421920776367px;
+    width: 25.048002243041992px;
+    border-radius: 0px;
+}
+
+.insta:hover{
+    transform: scale(1.25);
+}
+
+.twitch{
+    cursor: pointer;
+    height: 24px;
+    width: 21px;
+    border-radius: 0px;
+}
+
+.twitch:hover{
+    transform: scale(1.25);
+}
+
+.facebook{
+    cursor: pointer;
+    height: 23.33338165283203px;
+    width: 23.23000144958496px;
+    border-radius: 0px;
+}
+
+.facebook:hover{
+    transform: scale(1.25);
+}

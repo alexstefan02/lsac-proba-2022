@@ -1,0 +1,22 @@
+GET http://localhost:3000/memes
+
+###
+GET http://localhost:3000/memes/A395cb8db0bbcb8308ed5246
+
+###
+POST http://localhost:3000/memes
+Content-Type: application/json
+
+{
+    "description": "This is a meme description Alex1234"
+}
+###
+DELETE http://localhost:3000/memes/6395cb8eb0bbcb8308ed524e
+###
+PATCH http://localhost:3000/memes/639a215fc45b6e8fcd7c95d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFsZXhAc3R1ZC5hY3MudXBiLnJvIiwidXNlcm5hbWUiOiJBbGV4MTIzNCIsInBhc3N3b3JkIjoiJDJiJDEwJEEzTml5SmRaQkl3ck5SR01sdllWNGVOVzRWclhsc3dBQ05SejJ0Mmkxd0FNNzhpZWp2SnhhIiwiX2lkIjoiNjM5YTIwZmFjNDViNmU4ZmNkN2M5NWNmIiwiX192IjowLCJpYXQiOjE2NzEwNDUzOTd9.IkSJOZUerzMQtVUk-J3ZAgrPg9XnTtvIGzCLRf8ps8w
+Content-Type: application/json
+
+{
+    "description": "new description Alex1234"
+}

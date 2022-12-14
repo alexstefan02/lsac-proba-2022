@@ -1,0 +1,125 @@
+.container-login{
+    width: 488px;
+    height: 641px;
+    background-color: #6F3096;
+    border-radius: 5px;
+}
+
+.body{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 85%;
+}
+
+.main{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: 85%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-login{
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 15%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username-section, .password-section{
+  margin-top: 16px;  
+  width: 85.9%;
+}
+
+
+.loginBtn{
+    width: 218.08px;
+    height: 45px;
+    background: #6F3096;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 43px;
+}
+
+.header{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #6F3096;
+}
+
+button{
+    cursor: pointer;
+}
+
+.label{
+    margin-bottom: 0;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px; 
+    color: #252F65;
+}
+
+.logo-signin{
+    width: 108px;
+    height: 31px;
+}
+
+.close-signin{
+    height: 25px;
+    width: 25px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.close-signin:hover{
+    transform: scale(1.03125);
+}
+
+.loginBtn{
+    margin-top: 43px;
+    margin-bottom: 21.12%;
+}
+
+.loginBtn:hover{
+    transform: scale(1.03125);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input{
+    min-width: 97%;
+    height: 41px;
+    margin-top: 5px;
+    border: 1px solid #252F65;
+    border-radius: 5px;
+}
+
+.header{
+    margin-bottom: 52px;
+}
+
+@media(max-width: 500px){
+    .container-login{
+        width:90vw;
+        height:641px;
+    }
+}
