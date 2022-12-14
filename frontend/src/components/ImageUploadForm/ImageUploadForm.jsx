@@ -31,7 +31,7 @@ const ImageUploadForm = () => {
   }
   return (
     <div className='image-upload-form' id='image-upload-form'>
-      <div className='card'>
+      <div className='cardImageUploadForm'>
         <div className='description'>
           <h2 className='headerD no-margin top-header'>Ai tupeu și crezi că ești</h2>
           <h2 className='headerD no-margin last'>amuzant?</h2>

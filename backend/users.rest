@@ -3,9 +3,9 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-    "password": "is missing102",
-    "email": "is missing10@stud.acs.upb.ro",
-    "username": "is777777"
+    "password": "Alex1234",
+    "email": "Alex@stud.acs.upb.ro",
+    "username": "Alex1234"
 }
 
 ###
@@ -16,6 +16,6 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email": "is missing10",
-    "password": "is missing10"
+    "email": "Alex@stud.acs.upb.ro",
+    "password": "Alex1234"
 }

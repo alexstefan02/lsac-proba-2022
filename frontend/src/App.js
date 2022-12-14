@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Navbar from './components/Navbar/Navbar';
+import MainNavbar from './components/Navbar/Navbar';
 import FrontPage from './components/FrontPage/FrontPage';
 import ImageUploadForm from './components/ImageUploadForm/ImageUploadForm';
 import MostViewedSection from './components/MostViewedSection/MostViewedSection';
@@ -19,6 +19,7 @@ const App = () => {
         route !== 'home' ?
           <div>
             <div className='content active'>
+              <MainNavbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} setIsPhoneWidth={setIsPhoneWidth}/>
               <FrontPage />
               <ImageUploadForm />
               <MostViewedSection />
@@ -33,7 +34,7 @@ const App = () => {
             </div>
           </div> :
           <div>
-            <Navbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} setIsPhoneWidth={setIsPhoneWidth}/>
+            <MainNavbar setRoute={setRoute} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} setIsPhoneWidth={setIsPhoneWidth}/>
             <FrontPage />
             <ImageUploadForm />
             <MostViewedSection />
