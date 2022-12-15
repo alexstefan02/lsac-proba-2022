@@ -2,7 +2,7 @@
 
 proba 2022
 
-*******Task uri implementate*******
+*Task uri implementate*
 
 Frontend: 
 1. Navbar
@@ -19,7 +19,7 @@ Backend
 4. Input Validation
 5. Protected Endpoints
 
-******Tehnologii utilizate*********
+*Tehnologii utilizate*
 
 Frontend:
 React.js, HTML, CSS, Bootstrap
@@ -29,7 +29,8 @@ Node.js, Express, MongoDB, Mongoose, bcrypt, jsonwebtoken
 
 Pentru testare API: extensia REST Client (VS Code)
 
-*****Cum se ruleaza aplicatia?********
+*Cum se ruleaza aplicatia?*
 
 Frontend: npm i -> npm run start
+
 Backend: npm i -> npm run devStart
